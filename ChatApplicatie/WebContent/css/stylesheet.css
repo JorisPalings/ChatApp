@@ -1,0 +1,422 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Droid Serif Bold';
+    src: url('fonts/DroidSerif-Bold-webfont.eot');
+    src: url('fonts/DroidSerif-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DroidSerif-Bold-webfont.woff') format('woff'),
+         url('fonts/DroidSerif-Bold-webfont.ttf') format('truetype'),
+         url('fonts/DroidSerif-Bold-webfont.svg#droid_serifbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('fonts/DroidSans-webfont.eot');
+    src: url('fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/DroidSans-webfont.woff') format('woff'),
+         url('fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Body */
+body {
+	font-family: 'Droid Sans', sans-serif;
+	height: 100%;
+	line-height: 1.5;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+/* Index menu */
+nav#indexNav {
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+	box-sizing: border-box;
+	height: 4rem;
+	line-height: 4rem;
+	overflow: auto;
+	padding: 0 1.5rem;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+nav#indexNav h1, nav#indexNav a {
+	color: #000;
+	float: left;
+	padding: 0 1rem;
+	text-decoration: none;
+}
+
+nav#indexNav h1 {
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+nav#indexNav ul {
+	display: flex;
+	float: right;
+	justify-content: flex-end;
+	align-items: stretch;
+}
+
+nav#indexNav ul li a {
+	display: block;
+	transition: all .2s ease-in-out;
+}
+
+nav#indexNav ul li a:hover {
+	background: #28211c;
+	color: #fff;
+}
+
+/* All sections */
+section {
+	box-sizing: border-box;
+	height: 100vh;
+	padding: 10rem;
+	width: 100vw;
+}
+
+/* Splash section */
+section#splash {
+	color: #f0f2df;
+}
+
+section#splash p#statuses {
+	text-align: center;
+}
+
+section#splash p.error {
+	color: #f00;
+	text-align: center;
+}
+
+section#splash video {
+    background: url(../images/chat.jpg) no-repeat;
+    background-size: cover;
+    height: auto;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+	position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: auto;
+    z-index: -100;
+}
+
+/* Login & Register forms */
+div#darkOverlay {
+	background: rgba(0, 0, 0, .85);
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+form#loginForm, form#registerForm {
+	background: #28211c;
+	border-radius: 2px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+	box-sizing: border-box;
+	display: none;
+    left: 50%;
+    padding: 2rem;
+	position: fixed;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	z-index: 3;
+}
+
+form.modal fieldset legend {
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 1.5rem;
+}
+
+form.modal label, form.modal input {
+	display: block;
+}
+
+form.modal input {
+	background: #28211c;
+	border: 0;
+	border-bottom: 1px solid #863b19;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1rem;
+	padding: .5rem 1rem .25rem;
+}
+
+form.modal input:focus {
+	outline: 1px solid #863b19;
+}
+
+form.modal input[type=submit] {
+	background: #863b19;
+	color: #fff;
+	padding: .5rem 1rem;
+}
+
+form.modal label, form.modal input[type=submit] {
+	cursor: pointer;
+	margin: 1.5rem 0 .5rem;
+}
+
+/* Scroll arrow */
+img#scroll {
+	animation: bounce 1s ease-in-out infinite alternate;
+	bottom: 2.5rem;
+	cursor: pointer;
+    left: 50%;
+	position: absolute;
+    transform: translateX(-50%);
+}
+
+@keyframes bounce {
+    from {
+		bottom: 2.5rem;
+    }
+    to {
+		bottom: 3rem;
+    }
+}
+
+/* Topics section */
+section#topics {
+	background: #28211c;
+	color: #f0f2df;
+}
+
+section#topics h2 {
+	color: #b5a9a5;
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 3rem;
+	margin: 0 0 1rem;
+}
+
+section#topics form {
+	margin-top: 2.5rem;
+}
+
+section#topics form label, section#topics form input, section#topics form button {
+	background: none;
+	border: 0;
+	border-radius: 2px;
+	color: #fff;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1rem;
+}
+
+section#topics form input {
+	border-bottom: 1px solid #863b19;
+	margin: .5rem 1.5rem .5rem .5rem;
+	padding: .5rem 1rem .25rem;
+}
+
+section#topics form input:focus {
+	outline: 1px solid #863b19;
+}
+
+section#topics form button {
+	background: #863b19;
+	cursor: pointer;
+	padding: .5rem 1rem;
+}
+
+section#topics h3 {
+	border-top: 1px solid #fff;
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 1.5rem;
+	padding: 1rem 0;
+}
+
+section#topics p.reaction {
+	margin: 1.5rem;
+}
+
+/* Chat menu */
+nav#chatNav {
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+	box-sizing: border-box;
+	height: 4rem;
+	line-height: 4rem;
+	overflow: auto;
+	padding: 0 1.5rem;
+	position: relative;
+	width: 100%;
+	z-index: 1;
+}
+
+nav#chatNav h1, nav#chatNav a, nav#chatNav h2, nav#chatNav p, nav#chatNav form {
+	color: #000;
+	float: left;
+	padding: 0 1rem;
+	text-decoration: none;
+}
+
+nav#chatNav div.right {
+	float: right;
+}
+
+nav#chatNav h1 {
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+nav#chatNav a {
+	display: block;
+	transition: all .2s ease-in-out;
+}
+
+nav#chatNav a:hover {
+	background: #28211c;
+	color: #fff;
+}
+
+/* Friends list */
+main#chatScreen {
+	align-items: stretch;
+	display: flex;
+	height: calc(100vh - 4rem);
+}
+
+main#chatScreen aside {
+	background: #28211c;
+	color: #fff;
+}
+
+main#chatScreen aside p.error {
+	color: #f00;
+	padding: 1.5rem 1rem 0rem;
+}
+
+main#chatScreen form#addFriendForm {
+	display: flex;
+	padding: 1.5rem 1rem .5rem;
+}
+
+main#chatScreen form#addFriendForm input {
+	flex: 1;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1rem;
+	padding: .5rem 1rem .25rem;
+}
+
+main#chatScreen h3 {
+	border-bottom: 1px solid #863b19;
+	color: #b5a9a5;
+	font-family: 'Droid Serif Bold', serif;
+	font-size: 1.5rem;
+}
+
+main#chatScreen h3, main#chatScreen ul li {
+	padding: 1.25rem 1rem 0;
+}
+
+main#chatScreen aside button {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	display: inline-block;
+	float: right;
+	margin: 0 0 0 .5rem;
+	padding: 0;
+}
+
+main#chatScreen aside form#cancelFriendRequestForm,
+main#chatScreen aside form#acceptFriendRequestForm,
+main#chatScreen aside form#rejectFriendRequestForm,
+main#chatScreen aside form#removeFriendForm {
+	display: inline-block;
+	float: right;
+	margin: 0 0 0 .5rem;
+}
+
+main#chatScreen div#chat {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+main#chatScreen div#conversation {
+	background: #f0f2df;
+	flex: 1;
+	overflow: auto;
+}
+
+main#chatScreen form#sendMessageForm {
+	display: flex;
+}
+
+main#chatScreen form#sendMessageForm input[type=text] {
+	flex: 1;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1rem;
+	padding: .5rem 1rem .25rem;
+}
